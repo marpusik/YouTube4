@@ -17,8 +17,8 @@ $white: #ffffff;
 $black: #000000;
 // Burger Menu
 $burgerBreakpoint: $breakpoint992;
-$burgerColor: 'black';
-$burgerActiveColor: 'white';
+$burgerColor: $primaryDark;
+$burgerActiveColor: $white;
 
 // Fonts
 $fontMain: 'Montserrat', sans-serif;
