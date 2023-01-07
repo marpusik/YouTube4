@@ -11,7 +11,7 @@ nav {
 }
 .logo {
   @media (max-width: $breakpoint1450) {
-    img{
+    img {
       max-width: 200px;
     }
   }
@@ -20,7 +20,6 @@ nav {
   display: flex;
   gap: 60px;
   margin-left: 65px;
-  position: relative;
   @media (max-width: $breakpoint1450) {
     gap: 25px;
     margin-left: 40px;
@@ -29,14 +28,43 @@ nav {
     }
   }
   &__item {
-    .submenu {
-      position: absolute;
-      inset: 0;
-      padding: 15px;
-      background: $secondary;
-      &__item {
-      }
-      &__link {
+    &.with__submenu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .submenu {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 25px;
+        background: $primary;
+        display: none;
+        &.active{
+          display: block;
+          animation: fade .5s linear;
+        }
+        &__item {
+        }
+        &__link {
+          color: $white;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          display: flex;
+          padding: 15px;
+          transition: .3s ease;
+          &:hover {
+            background-color: $secondary;
+          }
+          .submenu__arrow{
+            transform: rotate(0deg);
+            transition: .3s ease;
+            &.active{
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
     }
   }
@@ -48,6 +76,9 @@ nav {
     text-transform: uppercase;
     color: $primaryDark;
     transition: .3s ease;
+    @media (max-width: $breakpoint1450) {
+      font-size: 14px;
+    }
     &:hover {
       color: $secondary;
     }
@@ -73,7 +104,8 @@ nav {
       display: none;
     }
     @media (max-width: $breakpoint480) {
-      flex-wrap: wrap;    }
+      flex-wrap: wrap;
+    }
   }
   &__btn {
     padding: 15px 30px;

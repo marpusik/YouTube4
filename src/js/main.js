@@ -28,3 +28,12 @@ function burgerMenu() {
   })
 }
 burgerMenu()
+function submenu() {
+  const submenu = document.querySelector('.submenu')
+  const trigger = document.querySelector('.with__submenu')
+  const arrow = document.querySelector('.submenu__arrow')
+  trigger.addEventListener('click', () => {
+    submenu.classList.toggle('active')
+  })
+}
+submenu()
