@@ -1,5 +1,4 @@
 nav {
-  //overflow: hidden;
 }
 .navbar {
   display: flex;
@@ -9,13 +8,7 @@ nav {
     justify-content: space-between;
   }
 }
-.logo {
-  @media (max-width: $breakpoint1450) {
-    img {
-      max-width: 200px;
-    }
-  }
-}
+.logo {}
 .menu {
   display: flex;
   gap: 60px;
@@ -108,7 +101,7 @@ nav {
       &.active {
         transform: rotate(180deg);
       }
-      .submenu__path{
+      .submenu__path {
         @media (max-width: $breakpoint992) {
           fill: $secondary;
         }
